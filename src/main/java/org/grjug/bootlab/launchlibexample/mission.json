@@ -1,0 +1,28 @@
+{
+    "id": 165,
+    "name": "GPS IIF-12",
+    "description": "GPS IIF-12 is a next-generation GPS satellite which provides navigational assistance for U.S. military operations on land, at sea, and in the air.",
+    "agencies": [{
+            "id": 16,
+            "name": "Canadian Space Agency",
+            "abbrev": "CSA",
+            "countryCode": "CAN",
+            "type": 1,
+            "infoURL": "http:\/\/www.space.gc.ca\/",
+            "wikiURL": "http:\/\/en.wikipedia.org\/wiki\/Canadian_Space_Agency",
+            "infoURLs": ["http:\/\/www.space.gc.ca\/"]
+        }],
+    "type": 10,
+    "typeName": "Communications",
+    "launch": {
+        "id": 503,
+        "name": "Atlas V 401 | GPS IIF-12 (USA-266)",
+        "windowstart": "February 5, 2016 13:38:00 UTC",
+        "windowend": "February 5, 2016 13:57:00 UTC",
+        "net": "February 5, 2016 13:38:00 UTC"
+    },
+    "infoURL": "https:\/\/en.wikipedia.org\/wiki\/GPS_Block_IIF",
+    "wikiURL": "",
+    "events": "",
+    "infoURLs": ["https:\/\/en.wikipedia.org\/wiki\/GPS_Block_IIF"]
+}
