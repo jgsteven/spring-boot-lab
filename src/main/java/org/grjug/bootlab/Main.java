@@ -1,6 +1,5 @@
 package org.grjug.bootlab;
 
-import java.util.List;
 import org.grjug.bootlab.domain.Launch;
 import org.grjug.bootlab.domain.LaunchRepository;
 import org.grjug.bootlab.domain.LaunchStatus;
