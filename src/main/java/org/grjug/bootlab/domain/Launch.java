@@ -2,7 +2,6 @@ package org.grjug.bootlab.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -10,7 +9,7 @@ import javax.persistence.ManyToOne;
 public class Launch {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Long id;
 
     private String name;
@@ -19,7 +18,7 @@ public class Launch {
     @ManyToOne
     private Location location;
 
-    public Launch() {
+    protected Launch() {
     }
 
     public Launch(String name, LaunchStatus status) {

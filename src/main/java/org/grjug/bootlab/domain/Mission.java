@@ -2,20 +2,23 @@ package org.grjug.bootlab.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Mission {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Long id;
 
     private String name;
     private String type;
 
-    public Mission() {
+    @ManyToOne
+    private Launch launch;
+
+    protected Mission() {
     }
 
     public Mission(String name, String type) {
@@ -23,6 +26,12 @@ public class Mission {
         this.type = type;
     }
 
+    public Mission(String name, String type, Launch launch) {
+        this.name = name;
+        this.type = type;
+        this.launch = launch;
+    }
+    
     public Long getId() {
         return id;
     }
@@ -47,11 +56,21 @@ public class Mission {
         this.type = type;
     }
 
+    public Launch getLaunch() {
+        return launch;
+    }
+
+    public void setLaunch(Launch launch) {
+        this.launch = launch;
+    }
+
     @Override
     public String toString() {
-        return "Mission{" + "id=" + id
+        return "Mission{"
+                + "id=" + id
                 + ", name=" + name
                 + ", type=" + type
+                + ", launch=" + launch
                 + '}';
     }
 }

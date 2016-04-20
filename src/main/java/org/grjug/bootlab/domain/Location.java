@@ -1,18 +1,25 @@
 package org.grjug.bootlab.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Location {
 
     @Id
+    @GeneratedValue
     private Long id;
 
     private String name;
     private String country;
 
-    public Location() {
+    protected Location() {
+    }
+
+    public Location(String name, String country) {
+        this.name = name;
+        this.country = country;
     }
 
     public Long getId() {
