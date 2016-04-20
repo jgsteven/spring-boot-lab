@@ -16,8 +16,6 @@ public class Launch {
 
     private String name;
     private int status;
-    private Instant windowStart;  // map to isostart
-    private Instant windowEnd;    // map to isoend
 
     @ManyToOne
     private Location location;
@@ -29,7 +27,7 @@ public class Launch {
         this.name = name;
         this.status = status.intValue();
     }
-    
+
     public Long getId() {
         return id;
     }
@@ -49,29 +47,13 @@ public class Launch {
     public LaunchStatus getStatusEnum() {
         return LaunchStatus.valueOf(status);
     }
-    
+
     public int getStatus() {
         return status;
     }
 
     public void setStatus(int status) {
         this.status = status;
-    }
-
-    public Instant getWindowStart() {
-        return windowStart;
-    }
-
-    public void setWindowStart(Instant windowStart) {
-        this.windowStart = windowStart;
-    }
-
-    public Instant getWindowEnd() {
-        return windowEnd;
-    }
-
-    public void setWindowEnd(Instant windowEnd) {
-        this.windowEnd = windowEnd;
     }
 
     public Location getLocation() {
@@ -87,10 +69,8 @@ public class Launch {
         return "Launch{"
                 + "id=" + id
                 + ", name=" + name
-                + ", status=" + status 
+                + ", status=" + status
                 + " (" + LaunchStatus.valueOf(status) + ')'
-                + ", windowStart=" + windowStart
-                + ", windowEnd=" + windowEnd
                 + ", location=" + location
                 + '}';
     }
