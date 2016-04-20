@@ -10,4 +10,8 @@ public interface LaunchRepository extends CrudRepository<Launch, Long> {
     Page<Launch> findAll(Pageable pageable);
 
     List<Launch> findByStatus(int status);
+    
+    default List<Launch> findByStatus(LaunchStatus status) {
+        return LaunchRepository.this.findByStatus(status.intValue());
+    }
 }

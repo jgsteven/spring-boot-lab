@@ -25,6 +25,11 @@ public class Launch {
     public Launch() {
     }
 
+    public Launch(String name, LaunchStatus status) {
+        this.name = name;
+        this.status = status.intValue();
+    }
+    
     public Long getId() {
         return id;
     }
@@ -41,6 +46,10 @@ public class Launch {
         this.name = name;
     }
 
+    public LaunchStatus getStatusEnum() {
+        return LaunchStatus.valueOf(status);
+    }
+    
     public int getStatus() {
         return status;
     }
@@ -78,7 +87,8 @@ public class Launch {
         return "Launch{"
                 + "id=" + id
                 + ", name=" + name
-                + ", status=" + status
+                + ", status=" + status 
+                + " (" + LaunchStatus.valueOf(status) + ')'
                 + ", windowStart=" + windowStart
                 + ", windowEnd=" + windowEnd
                 + ", location=" + location
