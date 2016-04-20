@@ -1,4 +1,4 @@
-package org.grjug.bootlab;
+package org.grjug.bootlab.domain;
 
 import java.util.List;
 import org.springframework.data.domain.Page;

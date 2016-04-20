@@ -1,4 +1,4 @@
-package org.grjug.bootlab;
+package org.grjug.bootlab.domain;
 
 import org.springframework.data.repository.CrudRepository;
 
